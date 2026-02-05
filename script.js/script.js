@@ -1,10 +1,9 @@
 
-     const menuToogle =
-   document.getElementById("hamburger");
-    const navLinks =
-   document.getElementById(".nav-links");
-    
-    Hamburger.addEventListener("click",()=>{
-       navLinks.classList.toogle("show");
-    });
-    
+    const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const navbar = document.querySelector(".navbar");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+

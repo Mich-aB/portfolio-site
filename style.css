@@ -9,6 +9,7 @@ body{
     background: #f4f4f4;
     line-height: 1.6;
     color: #333;
+    padding: 70px;
 }
 
 /*NAVBAR */
@@ -16,12 +17,13 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 18px 40px;
   background: #111;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -30,49 +32,118 @@ body{
   font-size: 18px;
 }
 
-/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
+.nav-links a{
+  color: white;
   text-decoration: none;
-  color: #fff;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.nav-links a:hover{
+.nav-links a::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2 px;
+  background: #e63946;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+  width: 100%;
+}
+
+.nav-links a.active{
   color: #e63946;
 }
 
 /* HAMBURGER */
 .hamburger {
   display: none;
-  font-size: 26px;
-  color: #fff;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
+}
+
+.hamburger span{
+  width: 25px;
+  height: 3px;
+  background: white;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: #e63946;
+  height: 90vh;
+  background: linear-gradient(135deg, #e63946, #ff8a8a);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.hero h2 {
-  font-size: 28px;
+.hero .btn{
+  margin-top: 20px;
+  background: white;
+  color: #e63946;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*==ABOUT==*/
+.about-section {
+  padding: 100px 20px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-container h3 {
+  margin-top: 40px;
   margin-bottom: 15px;
 }
 
-.hero p {
-  margin-bottom: 20px;
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.about-closing {
+  margin-top: 40px;
+  font-weight: 500;
 }
 
 /* BUTTON */
@@ -85,27 +156,251 @@ body{
   border-radius: 5px;
 }
 
-/* SECTIONS */
-.section {
-  padding: 50px 20px;
+/*==GENERAL==*/
+.page{
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/*SECTION*/
+.section{
+  padding: 80px 20px;
   max-width: 900px;
   margin: auto;
 }
 
-.section h2 {
-  margin-bottom: 15px;
+.section,
+.portfolio-section {
+  padding: 90px 20px;
+  text-align: center;
 }
 
-/* SERVICES */
-.services {
-  list-style: square;
-  padding-left: 20px;
+/*PRICING*/
+.services-page {
+  padding: 100px 20px 60px;
+  background: #111;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.services-page h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.services-page .subtitle {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  color: #111;
+  width: 280px;
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.price{
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px; 
+}
+  
+/* PORTFOLIO */
+.portfolio-section {
+  padding: 120px 20px;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.portfolio-tools{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Title spacing */
+.portfolio-container h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.portfolio-subtitle {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* Grid centered */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Card spacing */
+.portfolio-card {
+  width: 100%;
+  max-width: 320px;
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Text */
+.portfolio-card h3 {
+  margin: 18px 0 6px;
+  font-size: 20px;
+}
+
+.portfolio-card p {
+  padding: 0 18px 22px;
+  font-size: 14px;
+  color: #666;
+}
+
+/*CONTACT*/
+.contact-form {
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #c92f3c;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== Floating WhatsApp Button ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+
+  animation: pulse 1.8s infinite;
+}
+
+.wa-icon {
+  font-size: 22px;
+}
+
+.wa-text {
+  font-weight: bold;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .nav-links {

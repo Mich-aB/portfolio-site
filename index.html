@@ -11,54 +11,97 @@ content="width=device-width,initial-scale=1.0">
 <body>
 
 
-<nav class="navbar">
+<header class="navbar">
     <div class="logo">Michel Edet</div>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <ul class="nav-links" id="nav-links"></ul>
-        <li><a href="index.html">Home</a></li>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+  </header>
 
 <!--Link JS-->
 <script scr="script.js"></script>
 
 <!--HERO-->
-<section class="hero" id="home">
-    <h2>I Design Websites That Help Businesses Grow</h2>
-    <p>Clean, fast and mobile-friendly websites for modern businesses.</p>
-
-    <a href="https://wa.me/2349164243638" class="btn">Contact Me on WhatsApp</a>
+<section class="hero">
+  <h1>Professional Website Designer</h1>
+  <p>I build clean, mobile-friendly websites that help businesses grow.</p>
 </section>
 
-<!--About-->
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        Hi, I'm Michel, a web designer focused on building simple and effective websites for individuals and businesses
+<!--Portfolio Section-->
+<section class="portfolio-section" id="portfolio">
+<div class="portfolio-container">
+
+    <h2>My Portfolio</h2>
+    <p class="portfolio-subtitle">
+      A few sample projects that show my skills and design approach.
     </p>
-</section>
 
-<!--Services-->
-<section id="services" class="section">
-    <h2>My Services</h2>
-    <ul class="services">
-        <li>Website Design</li>
-        <li>Mobile Responsive Design</li>
-        <li>Business & Portfolio Websites</li>
-    </ul>
+    <div class="portfolio-grid">
+
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <h3>Business Website</h3>
+        <p>
+          A clean and responsive website designed for a small business to
+          showcase services and contact information.
+        </p>
+        <span class="portfolio-tools">HTML • CSS • JavaScript</span>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <h3>Personal Portfolio</h3>
+        <p>
+          A modern personal portfolio website built to present skills,
+          projects, and professional information.
+        </p>
+        <span class="portfolio-tools">HTML • CSS • JavaScript</span>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <h3>Landing Page</h3>
+        <p>
+          A simple landing page focused on clarity, layout, and user
+          engagement.
+        </p>
+        <span class="portfolio-tools">HTML • CSS</span>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!--Contact-->
-<section id="contact" class="section">
-    <h2>Let's Work Together</h2>
-    <a href="https:wa.me/2349164243638" class="btn">Get Started</a>
+<section class="contact-cta">
+  <h2>Let's Work Together</h2>
+  <p>Need a professional website? Let's talk.</p>
+  <a href="contact.html" class="btn">Contact Me</a>
 </section>
 
+<!--FOOTER-->
+<footer class="footer">
+    <p>©2026 Michel Edet. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/2349164243638?text=Hello%20I%20need%20a%20website"
+   class="whatsapp-float"
+   target="_blank">
+  <span class="wa-icon">💬</span>
+  <span class="wa-text">Chat on WhatsApp</span>
+</a>
+
+<!--JS-->
 <scipt scr="script.js"></scipt>
 </body>
 </html>
