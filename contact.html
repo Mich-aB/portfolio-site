@@ -10,8 +10,8 @@
     <body>
 
     <nav class="navbar">
+        <div class="nav-container">
             <h1 class="logo">Michel Edet</h1>
-
             <div class="hamburger" id="hamburger">☰</div>
 
     <ul class="nav-links" id="nav-links">
@@ -22,9 +22,11 @@
     </ul>
         </nav>
     
-    <section class="page">
-            <h2>Contact Me</h2>
-            <p>Let's create a website for you. Fill the form or WhatsApp me.</p>
+   <section class="contact-section">
+  <h2 class="section-title">Contact Me</h2>
+  <p class="section-subtitle">
+    Let's create a website for you. Fill the form or WhatsApp me.
+  </p>
 
             <form class="contact-form" action="https://formspree.io/f/maqqggro" method="POST">
   <input type="text" name="name" placeholder="Your Name" required>
@@ -33,18 +35,23 @@
   <button type="submit">Send Message</button>
   <p class="form-status"></p>
 </form>
-       <p class="whatsapp">
-        <a href="https://wa.me/2349164243638" target="blank">
-            Chat on WhatsApp
-        </a>
-       </p>
-        </section>
+      <p>
+    Or WhatsApp me:
+    <br/>
+    <a href="https://wa.me/2349164243638" target="_blank">Chat on WhatsApp</a>
+  </p>
+</section>
 
-    <a href="https://wa.me/2349164243638?text=Hello%20I%20need%20a%20website"
-   class="whatsapp-float"
-   target="_blank">
+<footer class="footer">
+    <p>©2026 Michel Edet. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/2349164243638?text=Hello%20I%20need%20a%20website" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
   <span class="wa-icon">💬</span>
-  <span class="wa-text">Chat on WhatsApp</span>
+  <span class="wa-text">Chat</span>
 </a>
 
 <script scr="script.js"></script>
