@@ -1,6 +1,11 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+
+  });
+}
