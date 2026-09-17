@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact|Michel Edet</title>
+        <title>Contact | Michel Edet</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -27,28 +27,171 @@
 
 </header>
     
-   <section class="contact-section">
-  <h2 class="section-title">Contact Me</h2>
-  <p class="section-subtitle">
-    Let's create a website for you. Fill the form or WhatsApp me.
-  </p>
+ <section class="contact-section">
 
-            <form class="contact-form" action="https://formspree.io/f/maqqggro" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-  <p class="form-status"></p>
-</form>
-      <p>
-    Or WhatsApp me:
-    <br/>
-    <a href="https://wa.me/2349164243638" target="_blank">Chat on WhatsApp</a>
-  </p>
+  <div class="contact-heading">
+    <p class="contact-label">GET IN TOUCH</p>
+
+    <h2>Let's Talk About<br><span>Your Project.</span></h2>
+
+    <p class="contact-intro">
+      Have an idea for a website or need to improve your online presence?
+      Send me a message and let's discuss how I can help.
+    </p>
+  </div>
+
+
+  <div class="contact-content">
+
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-info">
+
+      <div class="contact-info-header">
+        <p class="info-label">LET'S CONNECT</p>
+        <h3>Have a project in mind?</h3>
+        <p>
+          Whether you're starting a new business, building your personal brand,
+          or simply need a better website, I'd love to hear about it.
+        </p>
+      </div>
+
+
+      <div class="contact-details">
+
+        <div class="contact-detail">
+          <div class="detail-icon">✉</div>
+          <div>
+            <span>Email</span>
+            <p>Send me a message through the form.</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="detail-icon">💬</div>
+          <div>
+            <span>WhatsApp</span>
+            <p>Chat with me directly on WhatsApp.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <a href="https://wa.me/2349164243638?text=Hello%20Michel%2C%20I%20need%20a%20website"
+         class="contact-direct"
+         target="_blank">
+        Chat on WhatsApp <span>→</span>
+      </a>
+
+    </div>
+
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact-form-wrapper">
+
+      <div class="form-header">
+        <h3>Send a Message</h3>
+        <p>Tell me a little about what you need.</p>
+      </div>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/maqqggro"
+        method="POST"
+      >
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell me about your project..."
+            required
+          ></textarea>
+        </div>
+
+
+        <button type="submit" class="contact-submit">
+          Send Message <span>→</span>
+        </button>
+
+        <p class="form-status"></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
 </section>
 
+<!-- ===== FOOTER ===== -->
+
 <footer class="footer">
-    <p>©2026 Michel Edet. All rights reserved.</p>
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h3>Michel Edet</h3>
+      <p>
+        Web designer creating clean, responsive websites
+        for businesses and individuals.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Let's Connect</h4>
+
+      <a href="contact.html">Start a Project</a>
+
+      <a href="https://wa.me/2349164243638?text=Hello%20I%20need%20a%20website"
+         target="_blank">
+        WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Michel Edet. All rights reserved.</p>
+    <p>Built with HTML, CSS & JavaScript.</p>
+  </div>
+
 </footer>
 
 <a href="https://wa.me/2349164243638?text=Hello%20I%20need%20a%20website" 
